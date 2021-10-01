@@ -19,7 +19,7 @@ public class Drop_selection {
         drpCountry.selectByVisibleText("BAHAMAS");
         Thread.sleep(4000);
         drpCountry.selectByIndex(2);
-      
+      System.out.println("this test");
 	}
 
 }
