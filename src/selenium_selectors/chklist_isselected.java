@@ -10,7 +10,7 @@ public class chklist_isselected {
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 System.setProperty("webdriver.chrome.driver","C:\\Users\\Takhsela\\Downloads\\chromedriver_win32\\chromedriver.exe");
-		
+		System.out.println("Checking for Checkin!!");
 		WebDriver driver = new ChromeDriver();	 
 		String url_name = "http://demo.guru99.com/test/facebook.html";
         driver.get(url_name);
