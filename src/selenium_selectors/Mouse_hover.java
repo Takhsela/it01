@@ -20,16 +20,16 @@ System.setProperty("webdriver.chrome.driver","C:\\Users\\Takhsela\\Downloads\\ch
         driver.get(url_name);
         driver.manage().window().maximize();
         WebElement link_home = driver.findElement(By.xpath("//tr[@class='mouseOut'][1]")); 
-        WebElement td_link = driver.findElement(By.xpath("(//tr[@valign=\"top\"])[1]"));
+        WebElement td_link = driver.findElement(By.xpath("(//td[@bgcolor=\"#003366\"])[1]"));
         Actions builder = new Actions(driver);
         org.openqa.selenium.interactions.Action mouseOverHome = builder.moveToElement(link_home).build();
         
         String bgColor = td_link.getCssValue("background-color");
         System.out.println("Before hover: " + bgColor);        
         mouseOverHome.perform();        
-        bgColor =td_link.getCssValue("background-color");
-        System.out.println("After hover: " + bgColor);
-        driver.close();
+     String bgColor1 =link_home.getCssValue("background-color");
+        System.out.println("After hover: " + bgColor1);
+        
         
 	}
 
