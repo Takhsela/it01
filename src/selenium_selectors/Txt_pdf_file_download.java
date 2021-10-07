@@ -31,6 +31,11 @@ public class Txt_pdf_file_download {
         Actions builder1 = new Actions(driver);
         org.openqa.selenium.interactions.Action fill_username1 =builder1.moveToElement(pdf_write).click().sendKeys(pdf_write, "This is a pdf box ").build();
         fill_username1.perform();
+        WebElement Gen_pdf=driver.findElement(By.xpath("//button[@id=\"createPdf\"]"));
+        Gen_pdf.click();
+        WebElement clk_download_pdf=driver.findElement(By.xpath("//a[@id=\"pdf-link-to-download\"]"));
+        clk_download_pdf.click();
+	
 	}
 
 }
