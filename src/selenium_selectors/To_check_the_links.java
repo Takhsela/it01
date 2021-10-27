@@ -27,13 +27,14 @@ public class To_check_the_links {
 		 int i = 0;	
 		//extract the link texts of each link element		
 			for (WebElement e : linkElements) {						
-				System.out.println("web element text is "+e.getText());
-			linktexts[i] = e.getText();							
+			//	System.out.println("web element text is "+e.getText());
+			linktexts[i] = e.getText();	
+			System.out.println("web element text is "+linktexts[i]);
 			i++;			
      }		
-			System.out.println("Link text is "+linktexts.toString());
+		
 			//test each link		
-			for (String t : linktexts) {							
+			for (String t : linktexts) {
 			driver.findElement(By.linkText(t)).click();					
 			if (driver.getTitle().equals(underConsTitle)) {							
              System.out.println("\"" + t + "\""								
@@ -42,9 +43,9 @@ public class To_check_the_links {
              System.out.println("\"" + t + "\""								
                      + " is working.");			
          }		
-			driver.navigate().back();			
+			//driver.navigate().back();		
      }		
-			driver.quit();			
+			driver.quit();					
 
 		 
 	}
