@@ -22,7 +22,11 @@ public class To_check_the_links {
         
         String underConsTitle = "Under Construction: Mercury Tours";					
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	
-		 List<WebElement> linkElements = driver.findElements(By.tagName("a"));	
+		
+	
+		 List<WebElement> linkElements = driver.findElements(By.xpath("/html/body/div[2]/table/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr"));
+		
+		System.out.println("the size of the col is ="+linkElements.size());
 		 String[] linktexts=new String[linkElements.size()];
 		 int i = 0;	
 		//extract the link texts of each link element		
@@ -43,10 +47,11 @@ public class To_check_the_links {
              System.out.println("\"" + t + "\""								
                      + " is working.");			
          }		
-			//driver.navigate().back();		
+				driver.navigate().back();
+			
      }		
 			driver.quit();					
-
+		
 		 
 	}
 	
